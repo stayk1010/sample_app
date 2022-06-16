@@ -13,7 +13,7 @@ class ListsController < ApplicationController
   end
 
   def index
-   @list =List.all
+   @lists =List.all
   end
 
   def show
@@ -33,6 +33,6 @@ class ListsController < ApplicationController
   private
   
   def list_params
-    params.require(:list).permit(:title, :body)
+    params.require(:list).permit(:title, :body, :image)
   end
 end
